@@ -1,0 +1,122 @@
+# Web-Design
+
+<html>
+	 <head><!-- 網頁設置 -->
+		<title>web-note</title> <!-- 網頁標題 -->
+		<style><!-- week3 CSS函式及使用 --><!-- week5 利用CSS來製作漸層與動畫 
+					linear-gradient 直線性漸層
+					radial-gradient 徑向漸層
+					repeating-linear-gradient 重複線性漸層
+					用法如下XXX-gradient(顏色漸變方向, 色碼1 位置1,色碼2 位置2,....)
+					
+		-->
+		<meta> charset="UTF-8"><!-- 將網頁的編碼設為UTF-8 -->
+			#d1 {
+				width:300px;
+				height:200px;
+				background:linear-gradient(90deg,blue 33%,white 33%,white 66%,red 66%);
+			}
+			#d2 {
+				width:200px;
+				height:200px;
+				background:radial-gradient(circle,yellow 33%,gray 40%,black);
+				
+			}
+			#d3 {
+				width:300px;
+				height:200px;
+				background:repeating-linear-gradient(45deg,blue 6%,white 9%,red 12%);
+				animation:a3 0.2s infinite;
+			}
+			#d4 {
+				width:300px;
+				height:200px;
+				background:repeating-radial-gradient(circle,gold 5%,white 8%,black 10%);
+				animation:a4 0.2s infinite;
+			}
+			
+			@keyframes <!-- 動畫 -->a3 {
+				0%{background:repeating-linear-gradient(45deg,blue 6%,white 9%,red 12%);}
+				33%{background:repeating-linear-gradient(45deg,red 6%,blue 9%,white 12%);}
+				66%{background:repeating-linear-gradient(45deg,white 6%,red 9%,blue 12%);}
+				100%{background:repeating-linear-gradient(45deg,blue 6%,white 9%,red 12%);}
+			}
+			@keyframes a4 {
+				0%{background:repeating-radial-gradient(circle,gold 5%,white 8%,black 10%);}
+				50%{background:repeating-radial-gradient(circle,white 5%,black 8%,gold 10%);}
+				100%{background:repeating-radial-gradient(circle,black 5%,gold 8%,white 10%);}
+			}
+		</style>
+	</head>
+	
+	<body> 
+			<pre>
+			<font size="7">HTML補充</font>
+			UTF-8 萬國碼
+			nbsp; 空格(non-break space)
+			lt 小於 (less than) gt : 大於(great than) copy &copy圈圈C  reg&reg圈圈 R 
+			le小於等於 (less equal)
+			ge大於等於(great equal)
+			png jpg gif(常見檔案
+			———————————————
+			<font size="5"><i><u>不需結尾斜線</u></i></font>
+			-
+			br : 換行 
+			hr : 水平線 
+			img src="圖檔位址" : 圖
+			———————————————
+			<font suze="5"><i><u>需結尾斜線</u></i></font>
+			-
+			h1~6(較常只用到3||4) : 標題
+			b : 粗體字 i : 斜體字 u : 底線
+			sub : 下標 sup : 上標 
+			del : 刪除線 
+			s : 同上
+			pre : 自行排版（字型不太相同)
+			ul(unordered-list) : 其中要放li(list item列表元素)
+			ol : 有序列表(ordered list)
+			table : 表格
+			tr : (table row) 
+			td : 一行幾格
+			span、div :容器
+			a : 網頁
+			———————————————
+			<font size="5"><i><u>屬性</u></i></font>
+			-
+			start=“number what I input”
+			type=“type what you want to input”
+			ex:type=”I”(羅馬數字)
+			border 框
+			cellspacing 規定單元邊沿與其內容之間的空格
+			char set=“ ”
+			colspan : 規定單元格可橫跨的列
+			rowspan : 規定單元格可橫跨的行
+			onMouseOver=“src=’圖檔’；”
+			onMouseout=“src=‘圖檔‘；”
+			id=“ ”(不可數字開頭，呼叫時#id
+			class=“ ”(可共用，呼叫時.class
+			hsl( 圓上的角度, 鮮豔度,亮度
+			href=“”
+			target=“”(參數 _self _blank _parent _top
+			———————————————
+			<font size="5"><i><u>顏色的設定方法:</u></i></font>
+			1.顏色的英文單字
+			2.#色碼(00~FF三組共六位)，RGB的16進位法
+			3.rgb(0~255,0~255,0~255)，RGB的十進位
+			  rgba(0~255,0~255,0~255,0,0~1,0)，RGB加上可見度
+			4.hsl(0~360,0~100%,0~100%)，色像、彩度、亮度
+			  hsla(0~360,0~100%,0~100%,0,0~1,0)，HSL加上可見度
+			5.linear-gradient 直線性漸層
+			  radial-gradient 徑向漸層
+			  repeating-linear-gradient 重複線性漸層
+			  用法如下圖 XXX-gradient(顏色漸變方向, 色碼1 位置1,色碼2 位置2,....)
+			</pre>
+					
+		<center>
+			<div id="d1"></div>
+			<div id="d2"></div>
+			<div id="d3"></div>
+			<div id="d4"></div>
+		</center>
+	</body>
+</html>
