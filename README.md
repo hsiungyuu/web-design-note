@@ -1,2 +1,2 @@
 # web-design-note
-Just note
+## Just note
